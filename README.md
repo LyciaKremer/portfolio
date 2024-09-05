@@ -35,5 +35,5 @@ O portfólio foi desenvolvido com as seguintes tecnologias:
 Este é o link para utilização da aplicação em produção.
 
 ```bash
-
+portfolio-lycia-kremer.vercel.app
 ```
