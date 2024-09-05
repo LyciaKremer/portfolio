@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,3000,4000,5000,6000,7001,3001,4001,5001,6001,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..9001,14..32,100..900&display=swap')
+$primary-color: #1CA7C8
+$dark-theme: #0F021B
+$light-theme: #FFFFFF
+$title-light: #284260
+$title-dark: #D7F9FF
+$text-light: #6E859F
+$text-dark: #98D4DE
+$gradient: linear-gradient(90deg, #8C61D5 43.48%, $primary-color 100%)
+
+body
+  font-family: "Inter", sans-serif
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 4.5rem 20% 41px 20%
+  margin: 0
+  @media (max-width: 600px)
+    padding: 1% 5% 31px 5%
+
+section
+  position: relative
+  z-index: 9
+  max-width: 1090px
+  width: 100%
+
+body[data-theme='light'] 
+  background-color: $light-theme
+  color: $text-light
+  .logo p, .about h1, .projects h2, .projects .project h3, .contact .title, .projects .project p, .copyright
+    color: $title-light
+  .popover
+    background-color: $light-theme
+  .about .hello .description, .skills h2, .contact .option span, .projects .project p
+    color: $text-light
+  .contact a
+    text-decoration-color: $text-light
+  .projects .project, .gradient-bg
+    background-color: $light-theme
+
+body[data-theme='dark'] 
+  background-color: $dark-theme
+  color: $text-dark
+  .logo p, .about h1, .projects h2, .projects .project h3, .contact .title, .projects .project p, .copyright
+    color: $title-dark
+  .popover
+    background-color: $dark-theme
+  .about .hello .description, .skills h2, .contact .option span, .projects .project p
+    color: $text-dark
+  .contact a
+    text-decoration-color: $text-dark
+  .projects .project, .gradient-bg
+    background-color: $dark-theme
+
+.badge-outline
+  border: 1px solid $primary-color
+  color: $primary-color
+  padding: 8px 12px
+  border-radius: 4px
+  font-family: Inter
+  font-size: 16px
+  font-weight: 700
+
+.logo
+  display: flex
+  align-items: center
+  margin-bottom: 2%
+  gap: 20px
+
+  img
+    width: 46px
+    height: 46px
+  p
+    font-family: Chakra Petch
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+
+.profile-pic
+  width: 224px
+  height: 224px
+  gap: 0px
+  border: 2px solid $primary-color
+  border-radius: 50%
+  @media (max-width: 600px)
+    width: 198px
+    height: 198px
+
+.about 
+  display: flex
+  align-items: center
+  flex-direction: column
+  gap: 24px
+  .hello 
+    font-family: Chakra Petch
+    font-size: 16px
+    font-weight: 700
+    line-height: 24px
+    text-align: center
+    color: $primary-color
+    margin: 0
+  h1
+    font-family: Chakra Petch
+    font-size: 60px
+    font-weight: 700
+    text-align: center
+    margin: 0
+    @media (max-width: 600px)
+      font-size: 40px
+    span
+      background-image: $gradient
+      color: transparent
+      background-clip: text
+  .description
+    max-width: 581px
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    text-align: center
+    margin: 0 0 6% 0
+    @media (max-width: 600px)
+      width: 100%
+
+.skills
+  display: flex
+  align-items: center
+  flex-direction: column
+  margin-bottom: 5%
+  h2
+    font-size: 16px
+    font-weight: 700
+    text-align: center
+    margin: 0 0 20px 0
+  .row-skills
+    display: flex
+    gap: 14px
+    margin-bottom: 92px
+  img
+    @media (max-width: 1000px)
+      width: 100%
+
+.projects 
+  display: flex
+  flex-direction: column
+  margin-bottom: 12%
+  h2
+    font-family: Chakra Petch
+    font-size: 24px
+    font-weight: 700
+    text-align: left
+    margin: 0 0 3%
+  .row-projects
+    display: flex
+    gap: 24px
+    @media (max-width: 1000px)
+      flex-direction: column
+  .project 
+    display: flex
+    flex-direction: column
+    gap: 26px
+    border: 1px solid $primary-color
+    padding: 24px
+    border-radius: 4px  
+    text-decoration: none
+    justify-content: space-between
+    &:hover
+      box-shadow: 0px 4px 44px 0px #1CA7C84D
+    img 
+      width: 100%
+      max-width: 333px
+      height: 196px
+      object-fit: cover
+      @media (max-width: 1000px)
+        max-width: 100%
+    h3
+      margin: 0
+      font-family: Chakra Petch
+      font-size: 20px
+      font-weight: 700
+      line-height: 20px
+      max-width: 308px
+      @media (max-width: 1000px)
+        max-width: 100%
+    p
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      overflow: hidden
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      margin: 0
+      max-width: 333px
+      @media (max-width: 1000px)
+        max-width: 100%
+    span
+      font-family: Inter
+      font-size: 16px
+      font-weight: 700
+      color: $primary-color
+
+.contact 
+  display: flex
+  position: relative
+  z-index: 5
+  gap: 290px
+  margin-bottom: 18%
+  @media (max-width: 1000px)
+    flex-direction: column
+    margin-bottom: 40%
+    gap: 50px
+  .titles
+    display: flex
+    flex-direction: column
+    gap: 12px
+  p
+    margin: 0
+    font-family: Chakra Petch
+    font-size: 16px
+    font-weight: 700
+    color: $primary-color
+  .title
+    font-family: Chakra Petch
+    font-size: 60px
+    font-weight: 700
+    width: 100%
+    @media (max-width: 1000px)
+      font-size: 50px
+  .nav
+    display: flex
+    flex-direction: column
+    gap: 12px
+  .option
+    display: flex
+    align-items: center
+    gap: 8px
+    img
+      width: 24px
+      height: 24px
+    span
+      font-family: Inter
+      font-size: 16px
+    &.pop
+      position: relative
+      z-index: 1
+      &:hover
+        cursor: pointer
+        .popover
+          display: flex
+          z-index: 2
+          -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+          animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  a
+    text-decoration: underline
+
+.copyright
+  font-family: Inter
+  font-size: 16px
+  text-align: center
+
+.popover
+  position: absolute
+  display: none
+  margin: -55px 0 0 30px
+  font-family: Chakra Petch
+  font-weight: 700
+  font-size: 12px
+  border: 1px solid $primary-color
+  border-radius: 4px
+  padding: 5px 10px
+  color: $primary-color
+
+@-webkit-keyframes slide-top 
+  0% 
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+  100% 
+    -webkit-transform: translateY(-15px)
+    transform: translateY(-15px)
+@keyframes slide-top 
+  0% 
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+  100% 
+    -webkit-transform: translateY(-15px)
+      transform: translateY(-15px)
+
+:root 
+  --color1: 192, 188, 255
+  --color2: 108, 221, 255
+  --color3: 220, 115, 255
+  --color4: 222, 181, 255
+  --color5: 255, 217, 221
+  --color-interactive: 28, 167, 200
+  --circle-size: 80%
+  --blending: hard-light
+
+@keyframes moveInCircle 
+  0% 
+    transform: rotate(0deg)
+  50% 
+    transform: rotate(180deg)
+  100% 
+    transform: rotate(360deg)
+
+@keyframes moveVertical 
+  0% 
+    transform: translateY(-50%)
+  50% 
+    transform: translateY(50%)
+  100% 
+    transform: translateY(-50%)
+
+@keyframes moveHorizontal 
+  0% 
+    transform: translateX(-50%) translateY(-10%)
+  50% 
+    transform: translateX(50%) translateY(10%)
+  100% 
+    transform: translateX(-50%) translateY(-10%)
+
+.gradient-bg 
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -1
+  overflow: hidden
+  top: 0
+  left: 0
+  .gradients-container 
+    width: 100%
+    height: 100%
+  .g1 
+    position: absolute
+    background: radial-gradient(circle at center,rgba(var(--color1), 0.3) 0,rgba(var(--color1), 0) 50%)no-repeat
+    mix-blend-mode: var(--blending)
+    width: var(--circle-size)
+    height: var(--circle-size)
+    top: calc(50% - var(--circle-size) / 2)
+    left: calc(50% - var(--circle-size) / 2)
+    transform-origin: center center
+    animation: moveVertical 30s ease infinite
+    opacity: 1
+  .g2 
+    position: absolute
+    background: radial-gradient(circle at center,rgba(var(--color2), 0.3) 0,rgba(var(--color2), 0) 50%)no-repeat
+    mix-blend-mode: var(--blending)
+    width: var(--circle-size)
+    height: var(--circle-size)
+    top: calc(50% - var(--circle-size) / 2)
+    left: calc(50% - var(--circle-size) / 2)
+    transform-origin: calc(50% - 400px)
+    animation: moveInCircle 20s reverse infinite
+    opacity: 1
+  .g3 
+    position: absolute
+    background: radial-gradient(circle at center,rgba(var(--color3), 0.3) 0,rgba(var(--color3), 0) 50%)no-repeat
+    mix-blend-mode: var(--blending)
+    width: var(--circle-size)
+    height: var(--circle-size)
+    top: calc(50% - var(--circle-size) / 2 + 200px)
+    left: calc(50% - var(--circle-size) / 2 - 500px)
+    transform-origin: calc(50% + 400px)
+    animation: moveInCircle 40s linear infinite
+    opacity: 1
+  .g4 
+    position: absolute
+    background: radial-gradient(circle at center,rgba(var(--color4), 0.3) 0,rgba(var(--color4), 0) 50%)no-repeat
+    mix-blend-mode: var(--blending)
+    width: var(--circle-size)
+    height: var(--circle-size)
+    top: calc(50% - var(--circle-size) / 2)
+    left: calc(50% - var(--circle-size) / 2)
+    transform-origin: calc(50% - 200px)
+    animation: moveHorizontal 40s ease infinite
+    opacity: 0.7
+  .g5 
+    position: absolute
+    background: radial-gradient(circle at center,rgba(var(--color5), 0.3) 0,rgba(var(--color5), 0) 50%)no-repeat
+    mix-blend-mode: var(--blending)
+    width: calc(var(--circle-size) * 2)
+    height: calc(var(--circle-size) * 2)
+    top: calc(50% - var(--circle-size))
+    left: calc(50% - var(--circle-size))
+    transform-origin: calc(50% - 800px) calc(50% + 200px)
+    animation: moveInCircle 20s ease infinite
+    opacity: 1
+  .interactive 
+    position: absolute
+    background: radial-gradient(circle at center,rgba(var(--color-interactive), 0.3) 0,rgba(var(--color-interactive), 0) 50%)no-repeat
+    mix-blend-mode: var(--blending)
+    width: 100%
+    height: 100%
+    top: -50%
+    left: -50%
+    opacity: 0.7
