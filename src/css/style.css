@@ -135,7 +135,7 @@ body[data-theme=dark] .projects .project, body[data-theme=dark] .gradient-bg {
   background-clip: text;
 }
 .about .description {
-  max-width: 581px;
+  max-width: 630px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
