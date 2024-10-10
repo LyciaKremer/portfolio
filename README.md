@@ -1,6 +1,6 @@
 # Frontend Developer Portfolio
 
-Este projeto é um gerador de senhas personalizado desenvolvido com HTML, SASS e JavaScript. Ele permite ao usuário configurar a senha gerada com base em diferentes critérios, como comprimento e tipo de caracteres, e exibe a força da senha gerada.
+Este projeto é um portfólio interativo para um desenvolvedor(a) de frontend, que destaca as principais habilidades, projetos e inclui um layout responsivo e dinâmico. O site alterna automaticamente entre o modo claro e escuro com base no horário de Brasília, utilizando HTML, SASS e JavaScript.
 ## Estrutura do Projeto
 
 - **Diretórios:**
